@@ -1,5 +1,25 @@
 # go-shellcode-loader
 
+
+
+# 新版本
+
+与链接 `https://github.com/luckseal/Flash-Pop` 钓鱼程序结合，实现在木马在运行时，目标浏览器不弹窗，在木马未运行时，目标浏览器弹窗。
+
+
+
+## 其他
+
+### cs生成payload
+
+![image-20220907143736351](img/image-20220907143736351.png)
+
+
+
+
+
+# 老版本
+
 GO混淆免杀shellcode加载器AES加密
 
 混淆反检测 过DF、360和火绒
@@ -42,17 +62,17 @@ go install mvdan.cc/garble@latest
                           -tiny                    删除额外信息
                           
                           -literals               混淆文字
-
+    
                           -seed=random   base64编码的随机种子 
 
   go：
         
         -w                        去掉调试信息，不能gdb调试了
-
+    
         -s                         去掉符号表
-
+    
         -H windowsgui    隐藏执行窗口，不占用 cmd 终端。 （被查杀率高）
-
+    
         -race                    使数据允许竞争检测，编译时改变了生成后的文件特征， 使得杀软无法检测，当然有一天也会失效的。
 
 编译后得到go-sc.exe
